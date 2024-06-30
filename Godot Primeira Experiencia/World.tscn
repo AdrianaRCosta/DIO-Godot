@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 30.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 400, 21.5 )
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 803.0
+margin_bottom = 440.0
+color = Color( 0.290196, 0.52549, 0.976471, 1 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 4, 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 353, 113.5 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D/CollisionShape2D"]
+margin_left = -31.0
+margin_top = -29.5
+margin_right = 31.0
+margin_bottom = 29.5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 402, 417.5 )
+shape = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+margin_left = -401.0
+margin_top = -22.5
+margin_right = 398.0
+margin_bottom = 22.5
