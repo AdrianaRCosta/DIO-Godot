@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite" parent="."]
+position = Vector2( 2319, 789 )
+scale = Vector2( 0.948785, 0.948785 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="WarriorBlue"]
+margin_left = 609.2
+margin_top = -697.735
+margin_right = 649.2
+margin_bottom = -660.735
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Idle
+"
+
+[node name="Label2" type="Label" parent="WarriorBlue"]
+margin_left = 609.2
+margin_top = -516.45
+margin_right = 649.2
+margin_bottom = -479.45
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Run
+"
+
+[node name="Label3" type="Label" parent="WarriorBlue"]
+margin_left = 600.769
+margin_top = -318.302
+margin_right = 640.769
+margin_bottom = -281.302
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_side_1
+"
+
+[node name="Label4" type="Label" parent="WarriorBlue"]
+margin_left = 600.769
+margin_top = -130.694
+margin_right = 640.769
+margin_bottom = -93.6935
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_side_2
+"
+
+[node name="Label5" type="Label" parent="WarriorBlue"]
+margin_left = 615.524
+margin_top = 52.6989
+margin_right = 655.524
+margin_bottom = 89.6989
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_down_1
+"
+
+[node name="Label6" type="Label" parent="WarriorBlue"]
+margin_left = 611.308
+margin_top = 252.955
+margin_right = 651.308
+margin_bottom = 289.955
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_down_2
+"
+
+[node name="Label7" type="Label" parent="WarriorBlue"]
+margin_left = 613.416
+margin_top = 432.132
+margin_right = 653.416
+margin_bottom = 469.132
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_up_1
+"
+
+[node name="Label8" type="Label" parent="WarriorBlue"]
+margin_left = 602.877
+margin_top = 619.74
+margin_right = 642.877
+margin_bottom = 656.74
+rect_scale = Vector2( 3.16216, 1.88235 )
+text = "Attack_up_2
+"
+
+[node name="Label9" type="Label" parent="WarriorBlue"]
+margin_left = -522.774
+margin_top = -853.724
+margin_right = -447.774
+margin_bottom = -816.724
+rect_scale = Vector2( 15.1486, 3.9883 )
+text = "0 1 2 3 4 5
+"
+
+[node name="Label10" type="Label" parent="WarriorBlue"]
+margin_left = -651.36
+margin_top = -739.894
+margin_right = -611.36
+margin_bottom = 22.1063
+rect_scale = Vector2( 6.49274, 11.1152 )
+text = "0
+1
+2
+3
+4
+5
+6
+7
+"
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 2 )

@@ -1,0 +1,101 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Systems/MobSpawer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" type="Texture" id=3]
+[ext_resource path="res://addons/Tiny Swords/Terrain/Bridge/Bridge_All.png" type="Texture" id=4]
+[ext_resource path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" type="Texture" id=5]
+[ext_resource path="res://addons/Tiny Swords/Deco/11.png" type="Texture" id=6]
+[ext_resource path="res://addons/Tiny Swords/Factions/Knights/Buildings/House/House_Purple.png" type="Texture" id=7]
+[ext_resource path="res://addons/Tiny Swords/Deco/09.png" type="Texture" id=8]
+[ext_resource path="res://addons/Tiny Swords/Deco/06.png" type="Texture" id=9]
+[ext_resource path="res://addons/Tiny Swords/Factions/Knights/Buildings/Tower/Tower_Purple.png" type="Texture" id=10]
+[ext_resource path="res://addons/Tiny Swords/Resources/Gold Mine/GoldMine_Active.png" type="Texture" id=11]
+[ext_resource path="res://addons/Tiny Swords/Deco/08.png" type="Texture" id=12]
+[ext_resource path="res://addons/Tiny Swords/Factions/Knights/Buildings/Castle/Castle_Blue.png" type="Texture" id=13]
+[ext_resource path="res://addons/Tiny Swords/Deco/03.png" type="Texture" id=14]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="Main" type="Node2D"]
+
+[node name="MobSpawer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 475, 257 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+
+[node name="TilemapFlat" type="Sprite" parent="TileMap"]
+position = Vector2( 616, 214.5 )
+scale = Vector2( 2.53437, 3.54297 )
+texture = ExtResource( 3 )
+
+[node name="TilemapElevation" type="Sprite" parent="TileMap"]
+position = Vector2( 554, 2 )
+texture = ExtResource( 5 )
+
+[node name="Player" parent="TileMap" instance=ExtResource( 1 )]
+position = Vector2( 814, 341 )
+
+[node name="09" type="Sprite" parent="TileMap/Player"]
+position = Vector2( -726.472, 22.4735 )
+texture = ExtResource( 8 )
+
+[node name="11" type="Sprite" parent="."]
+position = Vector2( 794, -8 )
+texture = ExtResource( 6 )
+
+[node name="06" type="Sprite" parent="."]
+position = Vector2( -48, -34 )
+texture = ExtResource( 9 )
+
+[node name="09" type="Sprite" parent="."]
+position = Vector2( 922, 106 )
+texture = ExtResource( 8 )
+
+[node name="10" type="Sprite" parent="."]
+position = Vector2( 105, 47 )
+texture = ExtResource( 8 )
+
+[node name="12" type="Sprite" parent="."]
+position = Vector2( 768, 546 )
+texture = ExtResource( 8 )
+
+[node name="13" type="Sprite" parent="."]
+position = Vector2( 201, -153 )
+texture = ExtResource( 8 )
+
+[node name="08" type="Sprite" parent="."]
+position = Vector2( 1160, -145 )
+texture = ExtResource( 12 )
+
+[node name="03" type="Sprite" parent="."]
+position = Vector2( 953, 544 )
+texture = ExtResource( 14 )
+
+[node name="CastleBlue" type="Sprite" parent="."]
+position = Vector2( -27, -164 )
+texture = ExtResource( 13 )
+
+[node name="HousePurple" type="Sprite" parent="."]
+position = Vector2( 1145, 330 )
+texture = ExtResource( 7 )
+
+[node name="TowerPurple" type="Sprite" parent="."]
+position = Vector2( -63, 532 )
+texture = ExtResource( 10 )
+
+[node name="GoldMineActive" type="Sprite" parent="."]
+position = Vector2( 887, -125 )
+texture = ExtResource( 11 )
+
+[node name="TilemapElevation" type="Sprite" parent="."]
+position = Vector2( 556, 395.5 )
+scale = Vector2( 1, 1.04492 )
+texture = ExtResource( 5 )
+
+[node name="BridgeAll" type="Sprite" parent="TilemapElevation"]
+position = Vector2( -3.27252, 157.821 )
+rotation = 1.56226
+texture = ExtResource( 4 )
